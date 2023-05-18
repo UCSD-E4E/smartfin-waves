@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"extensions": {
+		"recommendations": [
+			"ms-python.isort",
+			"ms-toolsai.jupyter",
+			"jebbs.plantuml",
+			"ms-python.vscode-pylance",
+			"ms-python.pylint",
+			"ms-python.python",
+			"njpwerner.autodocstring"
+		]
+	}
+}
