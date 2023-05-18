@@ -1,0 +1,20 @@
+@startuml Kalman Filter Derived Heave Displacement
+left to right direction
+
+node "IMU" {
+    [Magnetometer] as mag
+    [Gyroscope] as gyro
+    [Accelerometer] as acc
+}
+[Kalman Filter] as kf
+[Pose Reprojection] as pose
+[Heave Acceleration Integration] as haccint
+[Spectral Analysis] as spectral
+acc --> kf : Sensor Accelerations (m/s^2)
+gyro --> kf : Sensor Angular Velocity (rad/s)
+mag --> kf : Sensor Magnetic Field Strength (uT)
+acc --> pose : Sensor Accelerations (m/s^2)
+kf -> pose : Attitude
+pose -> haccint : Vertical Acceleration (m/s^2)
+haccint -> spectral : Vertical Displacement (m)
+@enduml
